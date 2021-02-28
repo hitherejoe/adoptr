@@ -1,19 +1,14 @@
-# Put title of your app here
+# Adoptr
 
-<!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
-<!--- You can find both of these in the url bar when you open your repository in github. -->
 ![Workflow result](https://github.com/hitherejoe/adoptr/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
-<!--- Describe your app in one or two sentences -->
 
 Adoptr shows you dogs that are available to rehome in Sussex, United Kingdom. These dogs need their forever home, so Adoptr is here to help make that match!
 
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
 
 - Ability to filter dogs by certain factors
 
@@ -36,7 +31,6 @@ Adoptr shows you dogs that are available to rehome in Sussex, United Kingdom. Th
 <img src="/art/landscape.png">
 
 ## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
 &emsp;<img src="/art/dark.png">&emsp;<img src="/art/filter.png">&emsp;<img src="/art/landscape.png">
 &emsp;<img src="/art/star.gif">&emsp;<img src="/art/toolbar.gif">
