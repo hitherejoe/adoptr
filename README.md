@@ -32,8 +32,6 @@ Adoptr shows you dogs that are available to rehome in Sussex, United Kingdom. Th
 
 ## :camera_flash: Screenshots
 <img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
-&emsp;<img src="/art/dark.png">&emsp;<img src="/art/filter.png">&emsp;<img src="/art/landscape.png">
-&emsp;<img src="/art/star.gif">&emsp;<img src="/art/toolbar.gif">
 
 ## License
 ```
