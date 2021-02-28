@@ -1,25 +1,38 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package co.joebirch.adoptr
 
-import android.os.Bundle
-import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.runtime.Composable
-import co.joebirch.adoptr.theme.PuppyParkTheme
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
+import androidx.activity.compose.setContent
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
@@ -37,6 +50,7 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.rememberBackdropScaffoldState
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
@@ -57,6 +71,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navigate
 import androidx.navigation.compose.rememberNavController
+import co.joebirch.adoptr.theme.PuppyParkTheme
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -73,11 +88,15 @@ class MainActivity : AppCompatActivity() {
                 NavHost(navController, startDestination = "dogs") {
                     composable("dogs") {
                         viewModel.liveData.observeAsState().value?.let { state ->
-                            DogDashboard(state = state, onDogSelected = {
-                                navController.navigate("dogs/${it}")
-                            }, filterDogs = {
-                                viewModel.filterDogsBy(it)
-                            })
+                            DogDashboard(
+                                state = state,
+                                onDogSelected = {
+                                    navController.navigate("dogs/$it")
+                                },
+                                filterDogs = {
+                                    viewModel.filterDogsBy(it)
+                                }
+                            )
                         }
                     }
                     composable("dogs/{id}") { backStackEntry ->
@@ -128,11 +147,13 @@ fun DogDashboard(
             FilterOptions(attributes = state.includeAttributes) {
                 filterDogs(it)
             }
-        }, frontLayerContent = {
+        },
+        frontLayerContent = {
             DogGrid(dogs = state.dogs) {
                 onDogSelected(it)
             }
-        })
+        }
+    )
 }
 
 @Composable
@@ -197,7 +218,8 @@ fun DogGrid(
                             }
                         }
                     }
-                })
+                }
+            )
         }
     }
 }
