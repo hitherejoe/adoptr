@@ -1,27 +1,45 @@
-# Template repository
+# Put title of your app here
 
-Template repository for the Jetpack Compose [#AndroidDevChallenge](https://developer.android.com/dev-challenge).
+<!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
+<!--- You can find both of these in the url bar when you open your repository in github. -->
+![Workflow result](https://github.com/hitherejoe/adoptr/workflows/Check/badge.svg)
 
-## Getting started
-Copy this repository by pressing the "Use this template" button in Github.
-Clone your repository and open it in the latest [Android Studio (Canary build)](https://developer.android.com/studio/preview).
 
-## Submission requirements
-- Follow the challenge description on the project website: [developer.android.com/dev-challenge](https://developer.android.com/dev-challenge)
-- All UI should be written using Jetpack Compose
-- The Github Actions workflow should complete successfully
-- Include two screenshots of your submission in the [results](results) folder. The names should be
-  screenshot_1.png and screenshot_2.png.
-- Include a screen record of your submission in the [results](results) folder. The name should be
-  video.mp4
-- Replace the contents of [README.md](README.md) with the contents of [README-template.md](README-template.md) and fill out the template.
+## :scroll: Description
+<!--- Describe your app in one or two sentences -->
 
-## Code formatting
-The CI uses [Spotless](https://github.com/diffplug/spotless) to check if your code is formatted correctly and contains the right licenses.
-Internally, Spotless uses [ktlint](https://github.com/pinterest/ktlint) to check the formatting of your code.
-To set up ktlint correctly with Android Studio, follow one of the [listed setup options](https://github.com/pinterest/ktlint#-with-intellij-idea).
+Adoptr shows you dogs that are available to rehome in Sussex, United Kingdom. These dogs need their forever home, so Adoptr is here to help make that match!
 
-Before committing your code, run `./gradlew app:spotlessApply` to automatically format your code.
+
+## :bulb: Motivation and Context
+<!--- Optionally point readers to interesting parts of your submission. -->
+<!--- What are you especially proud of? -->
+
+- Ability to filter dogs by certain factors
+
+<img src="/art/filter.png">
+
+- Dark theme support
+
+<img src="/art/dark.png">
+
+- Animation when favoriting a dog
+
+<img src="/art/star.gif">
+
+- Animated toolbar and header photo
+
+<img src="/art/toolbar.gif">
+
+- Adaptive landscape support
+
+<img src="/art/landscape.png">
+
+## :camera_flash: Screenshots
+<!-- You can add more screenshots here if you like -->
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+&emsp;<img src="/art/dark.png">&emsp;<img src="/art/filter.png">&emsp;<img src="/art/landscape.png">
+&emsp;<img src="/art/star.gif">&emsp;<img src="/art/toolbar.gif">
 
 ## License
 ```

@@ -1,13 +1,15 @@
 <resources>
-    <!--
-      Copyright 2020 The Android Open Source Project
-      Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
-      in compliance with the License. You may obtain a copy of the License at
-      http://www.apache.org/licenses/LICENSE-2.0
-      Unless required by applicable law or agreed to in writing, software distributed under the License
-      is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-      or implied. See the License for the specific language governing permissions and limitations under
-      the License.
-      -->
-    <string name="app_name">AndroidDevChallenge</string>
+    <string name="app_name">Adoptr</string>
+
+    <string name="filter_dogs">Filter dogs</string>
+    <string name="filter_message">Not all dogs are comfortable around everyone. Please select the options that you have living with you, so we can filter these out from the adoption list.</string>
+    <string name="label_reserved">Reserved</string>
+    <string name="cd_reserved">This dog is reserved</string>
+    <string name="label_empty">Sorry, there are no dogs that match the selected filters</string>
+
+    <string name="label_adopt_me">Adopt me</string>
+    <string name="cd_adopt_me">Adopt me</string>
+    <string name="cd_back">Go back</string>
+    <string name="cd_favorite">Select dog as a favorite</string>
+    <string name="cd_unfavorite">Unselect dog as a favorite</string>
 </resources>
